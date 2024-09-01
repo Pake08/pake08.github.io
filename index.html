@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ぱけ</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <div>
+        <a onclick="showHome()" class="header-logo" href=""><h2>ぱけ</h2></a>
+      </div>
+      <div>
+        <a onclick="showPresent()" class="header-link">配布</a>
+        <a onclick="showSale()" class="header-link">販売</a>
+        <a onclick="showBuy()" class="header-link">購入</a>
+        <a href="https://discord.com/invite/vvzeEr5KVG" target="_blank" class="header-link">Discord</a>
+      </div>
+    </header>
+    <div id="home">
+      <h1 class="welcome">Welcome</h1>
+    </div>
+    <div id="present">
+      <h1 class="not-present">現在配布してるものはありません</h1>
+    </div>
+    <div id="sale">
+      <h1 class="not-sale">現在販売してるものはありません</h1>
+    </div>
+    <div id="buy">
+      <div class="buy-form">
+        <h2 class="buy-txt">購入</h2>
+        <form action="https://api.staticforms.xyz/submit" method="post">
+          <input type="hidden" name="accessKey" value="1c64968b-a6e7-4f1a-8be1-ffa285cecf45">
+          <div class="item">
+            <label>メールアドレス</label>
+            <input type="email" required>
+          </div>
+          <div class="item">
+            <label>購入するもの</label>
+            <input type="text" required>
+          </div>
+          <div class="item">
+            <label>アマギフコード</label>
+            <input type="text" required>
+          </div>
+          <div class="btn-area">
+            <h3>対応に時間がかかる場合がございます</h3>
+            <input class="buy-btn" type="submit" value="購入する">
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
